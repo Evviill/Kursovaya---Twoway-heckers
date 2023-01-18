@@ -10,7 +10,7 @@ Square = Canvas(MainWindow, width=795, height=795, bg='#1c1c1c')
 Square.pack()
 
 n2_sp = ()
-ur = 3
+ur = 1
 k_rez = 0
 o_rez = 0
 poz1_x = -1
@@ -57,17 +57,6 @@ def draw_viv(x1, y1, x2, y2):
 
 def start_game():
     global Board
-    # Board = [
-    #     [0, 3, 0, 3, 0, 3, 0, 3],
-    #     [3, 0, 3, 0, 3, 0, 3, 0],
-    #     [0, 3, 0, 3, 0, 3, 0, 3],
-    #     [0, 0, 0, 0, 0, 0, 0, 0],
-    #     [0, 0, 0, 0, 0, 0, 0, 0],
-    #     [1, 0, 1, 0, 1, 0, 1, 0],
-    #     [0, 1, 0, 1, 0, 1, 0, 1],
-    #     [1, 0, 1, 0, 1, 0, 1, 0]
-    # ]
-
     Board = [
         [0, 3, 0, 3, 0, 3, 0, 3],
         [3, 0, 3, 0, 3, 0, 3, 0],
@@ -76,7 +65,7 @@ def start_game():
         [0, 0, 0, 0, 0, 0, 0, 0],
         [1, 0, 1, 0, 1, 0, 1, 0],
         [0, 1, 0, 1, 0, 1, 0, 1],
-        [1, 0, 1, 0, 1, 0, 1, 0],
+        [1, 0, 1, 0, 1, 0, 1, 0]
     ]
 
 
@@ -146,7 +135,6 @@ def CompTurn1():  # !!!
         dh = len(n2_sp[th])
         for h in n2_sp:
             h = h
-        print(dh, n2_sp)
         for i in range(dh - 1):
             turns_list = Turn(1, n2_sp[th][i][0], n2_sp[th][i][1], n2_sp[th][1 + i][0], n2_sp[th][1 + i][1])
         n2_sp = []
